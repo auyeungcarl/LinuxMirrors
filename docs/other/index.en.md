@@ -164,7 +164,7 @@ hide:
 
     </div>
 
-    Due to some force majeure, [Docker Hub](https://hub.docker.com) is currently inaccessible in the Chinese mainland network environment, so the image cannot be pulled normally. It is recommended to use the image warehouse source available in Chinese mainland mentioned below.
+    Due to some force majeure, [Docker Hub](https://hub.docker.com) is currently inaccessible in the Chinese mainland network environment, so the image cannot be pulled normally. It is recommended to use the image repository source available in Chinese mainland mentioned below.
 
     Note: The specified Web protocol in the script is only for controlling the `Docker CE` software source. `Docker Registry` always uses the `HTTPS` protocol.
 
@@ -351,7 +351,7 @@ Command options(name/meaning/value):
       --branch centos \
       --branch-version 9
     ```
-    > This option can be used to control the compatibility of the installed software package (only applicable to Red Hat operating systems). For details, see the path name (positive integer) representing the version number in the corresponding warehouse directory.
+    > This option can be used to control the compatibility of the installed software package (only applicable to Red Hat operating systems). For details, see the path name (positive integer) representing the version number in the corresponding repository directory.
 
 - ### Specify Docker Engine Installation Version
 
@@ -470,6 +470,20 @@ Command options(name/meaning/value):
     If it prompts that it is not supported, please use the system's own package management tool to install it. Because these packages are built and maintained by the Linux distribution's package maintainers and may have differences in configuration or are built from modified source code.
 
     You can also use &nbsp; [![Docker Desktop](../assets/images/icon/custom/docker-desktop.svg){ width="140" style="vertical-align: -0.2rem" }](https://www.docker.com/products/docker-desktop)
+
+## Lite Version
+
+The project also provides a simplified version, which is a copy of the main script, designed for enterprise products and large open-source community projects. It has the following features:
+
+- Single display language `English`, no I18n internationalization
+- Uses the official source by default, removing the interactive selection of built-in software sources
+- Removes irrelevant printouts
+- Retains core logic and command option design
+
+``` bash
+bash <(curl -sSL https://linuxmirrors.cn/docker-lite.sh)
+```
+> Please familiarize yourself with this project before using it. It is not recommended for novice users.
 
 ## Best Practices
 
